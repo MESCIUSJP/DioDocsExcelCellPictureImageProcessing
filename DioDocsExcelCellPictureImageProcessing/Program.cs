@@ -38,7 +38,7 @@ if (pictureCells != null)
                     continue;
                 }
 
-                // 元の代替テキスト（Alt Text）を保持
+                // 元の代替テキストを保持
                 string altText = cellPicture.AltText;
 
                 // 元の画像と編集後の画像をメモリストリームで保持
@@ -70,7 +70,6 @@ static void ProcessImage(Stream inputStream, Stream outputStream)
     using var srcBmp = new GcBitmap();
     srcBmp.Load(inputStream);
 
-    // リサイズ判定（横幅800px以上なら800pxに縮小）
     // 最大幅800ピクセルを基準にリサイズ後のサイズを設定
     int targetWidth = srcBmp.PixelWidth;
     int targetHeight = srcBmp.PixelHeight;
@@ -116,6 +115,6 @@ static void ProcessImage(Stream inputStream, Stream outputStream)
 
 static string GetSystemFontPath()
 {
-    // Windows環境での日本語フォント例（Linuxコンテナ等の場合は同梱フォントを指定）
+    // Windows環境での日本語フォント例（Linux環境などで実行する場合は、フォントファイルのパスを環境に合わせて変更してください）
     return @"C:\Windows\Fonts\meiryo.ttc";
 }
