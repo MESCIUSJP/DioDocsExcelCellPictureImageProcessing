@@ -109,7 +109,7 @@ static void ProcessImage(Stream inputStream, Stream outputStream)
         );
     }
 
-    // JPEG形式（品質80%）で出力ストリームへ保存し容量を削減
+    // JPEG形式（品質80%）で出力ストリームへ保存
     resizedBmp.SaveAsJpeg(outputStream, null, 80);
 }
 
