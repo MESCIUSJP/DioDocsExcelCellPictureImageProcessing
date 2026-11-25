@@ -45,7 +45,7 @@ if (pictureCells != null)
                 using var originalImageStream = new MemoryStream(cellPicture.ImageData);
                 using var processedImageStream = new MemoryStream();
 
-                // 3. DioDocs for Imaging: 画像の編集（リサイズ・スタンプ描画・圧縮）
+                // 3. DioDocs for Imaging: 画像の編集（リサイズ・テキスト描画・圧縮）
                 ProcessImage(originalImageStream, processedImageStream);
 
                 // 4. DioDocs for Excel: 編集済み画像と代替テキストで新しいCellPictureを設定
